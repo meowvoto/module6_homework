@@ -16,15 +16,11 @@ function showNumbersPrimality(thisNumber) {
             let a;
             let b = []; 
             for (let i = 2; i < thisNumber ;i++) {
-            a = thisNumber % i;
-            b.push(a);
+                a = thisNumber % i;
+                b.push(a);
             }
             const check = (element) => element === 0;
-            if (b.some(check)) {
-                console.log('Это число не является простым');
-            } else {
-                console.log('Это число является простым');
-            }
+            b.some(check) ? console.log('Это число не является простым') : console.log('Это число является простым');
     }
 }
 showNumbersPrimality(thisNumber);
